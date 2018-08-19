@@ -4,7 +4,6 @@ LIBS:power
 LIBS:device
 LIBS:switches
 LIBS:relays
-LIBS:motors
 LIBS:transistors
 LIBS:conn
 LIBS:linear
@@ -189,6 +188,9 @@ LIBS:efm8bb-qfn20
 LIBS:sk6812_3535
 LIBS:da4xbridge
 LIBS:11aa-unio-eeprom
+LIBS:ws2813
+LIBS:ts4231
+LIBS:xor_sot_353_74lvc1g86
 LIBS:ice40ul1k
 LIBS:esp32-wroom
 LIBS:conn_8x2
@@ -202,6 +204,8 @@ LIBS:74hc259
 LIBS:max19517
 LIBS:lm3478
 LIBS:tps40211
+LIBS:lm5110
+LIBS:vn7040-switch
 LIBS:rpi_with_supply-cache
 EELAYER 25 0
 EELAYER END
@@ -1207,17 +1211,6 @@ F 1 "L7812" H 6600 4475 50  0000 L CNN
 F 2 "TO-263-3Lead" H 6625 4200 50  0001 L CIN
 F 3 "" H 6600 4300 50  0001 C CNN
 	1    6600 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L vn7040-switch U3
-U 1 1 5B2D271D
-P 8150 4000
-F 0 "U3" H 7900 4250 60  0000 C CNN
-F 1 "vn7040-switch" H 8150 3750 60  0000 C CNN
-F 2 "SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8150 4300 60  0000 C CNN
-F 3 "" H 8150 4000 60  0000 C CNN
-	1    8150 4000
 	1    0    0    -1  
 $EndComp
 $Comp
