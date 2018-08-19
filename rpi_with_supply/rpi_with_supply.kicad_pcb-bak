@@ -87,7 +87,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory rpi_with_supply_revA))
+      (outputdirectory rpi_with_supply_revB))
   )
 
   (net 0 "")
