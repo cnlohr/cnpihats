@@ -6,7 +6,7 @@
 
 #ifdef ALTERNATE_PINS_PGM
 #define GP_AVR_RST  2
-#define GP_AVR_MISO 14
+#define GP_AVR_MISO 17
 #define GP_AVR_MOSI 3
 #define GP_AVR_SCK  4
 #else

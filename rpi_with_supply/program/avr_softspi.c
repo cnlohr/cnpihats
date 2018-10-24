@@ -186,13 +186,35 @@ int  Burnfuses( uint32_t procid, uint32_t hfuselfuse )
 	uint8_t hfuse = (hfuselfuse & 0xff00) >> 8;
 	uint8_t lfuse = hfuselfuse & 0xff;
 	printf( "Programming AVR %p:%02x:%02x\n", procid, hfuse, lfuse );
-	AVRSR4( 0xaca80000 | hfuse); 
+	AVRSR4( 0x58080000 );
+	AVRSR4( 0x50000000 );	//Prep chip.
+
+	int ret = 0;
+	int tries = 0;
+
+	for( tries; tries < 10; tries++ )
+	{
+		AVRSR4( 0xaca80000 | hfuse); 
+		usleep( 100 );
+		ret = AVRSR4( 0x58080000 ) & 0xff;
+		ret = AVRSR4( 0x58080000 ) & 0xff;
+		ret = AVRSR4( 0x58080000 ) & 0xff;
+		if( ret == hfuse ) break;
+	}
+	if( ret != hfuse ) { fprintf( stderr, "Error: Couldn't write HFUSE [%02x != %02x]\n", hfuse, ret ); goto fail; }
+
+	for( tries; tries < 10; tries++ )
+	{
+		AVRSR4( 0xaca00000 | lfuse);
+		usleep( 100 );
+		ret = AVRSR4( 0x50000000 ) & 0xff;
+		ret = AVRSR4( 0x50000000 ) & 0xff;
+		ret = AVRSR4( 0x50000000 ) & 0xff;
+		if( ret == lfuse ) break;
+	}
+	if( ret != lfuse ) { fprintf( stderr, "Error: Couldn't write LFUSE [%02x != %02x]\n", lfuse, ret ); goto fail; }
+
 	hfuse = AVRSR4( 0x58080000 );
-	hfuse = AVRSR4( 0x58080000 );
-	hfuse = AVRSR4( 0x58080000 );
-	AVRSR4( 0xaca00000 | lfuse); 
-	lfuse = AVRSR4( 0x50000000 );
-	lfuse = AVRSR4( 0x50000000 );
 	lfuse = AVRSR4( 0x50000000 );
 	printf( "Read back: %02x:%02x\n",  hfuse&0xff, lfuse&0xff );
 

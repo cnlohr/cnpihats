@@ -121,7 +121,9 @@ double GetMHzOfOSCCAL( int devcode, int pagesizewords, uint8_t osccal )
 			mostaccuratediff = diff;
 			mostaccurate = Times[i];
 		}
+		printf( "%f ", 1.0/(Times[i]/50000.0) );
 	}
+	printf( "\n" );
 
 	double MHz = 1.0/(mostaccurate/50000.0);
 	return MHz;
