@@ -36,6 +36,7 @@ void ResetAVR();
 int  EraseAVR();
 int DumpAVRMemories( int procid );
 int  Burnfuses( uint32_t procid, uint32_t hfuselfuse );
+int  ReadFlashWord( int procid, int address );
 int  WriteEEProm( uint32_t procid, int address, uint8_t value );
 void UnconfigureAVRPins();
 

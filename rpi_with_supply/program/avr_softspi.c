@@ -271,6 +271,19 @@ fail:
 	return -1;
 }
 
+int  ReadFlashWord( int procid, int address )
+{
+	int r = EnterAVRProgramMode( procid ); 	if( r ) { printf( "Enter Program Mode Fail.\n" ); goto fail; }
+
+	int i = address >> 1;
+	uint8_t irh = AVRSR4( 0x20000000 | ((i)<<8 ) )&0xff;
+	uint8_t irl = AVRSR4( 0x28000000 | ((i)<<8) )&0xff;
+	AVRSETRST(1);
+	usleep(20*1000);
+	return (address &1)?irl:irh;
+fail:
+	return -1;
+}
 
 void InitAVRSoftSPI()
 {

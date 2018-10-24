@@ -33,6 +33,7 @@ int cnreadint( const char * pl, int * number, const char ** ptpl )
 		if( c == 'x' ) { base = 16; c = *(pl++); }
 		else if( c == 'b' ) { base = 2; c = *(pl++); }
 		else if( c >= '0' && c <= '7' ) base = 8;
+		else if( c == 0 ) { retcode = 0; goto endmark; }
 		else { retcode = -3; goto endmark; }
 	}
 
@@ -138,15 +139,15 @@ int main( int argc, char ** argv )
 {
 	if( argc < 4 )
 	{
-		fprintf( stderr, "Error: Usage: %s [devcode] [pagesizewords] [wecro] [Parameters]\n", argv[0] );
+		fprintf( stderr, "Error: Usage: %s [devcode] [pagesizewords] [wecrbo] [Parameters]\n", argv[0] );
 		fprintf( stderr, " 	  devcode = 0x1e9108 16 = ATTiny25\n\
 	   devcode = 0x1e9007 16 = ATTiny13\n\
 	w: write flash.  Extra parameter  [binary file to flash]\n\
 	e: erase chip.\n\
 	c: config chip fuses [0xff_hfuse_lfuse] (must indicate 0xff first)\n\
 	r: dump chip memories\n\
+	b: read byte [address]\n\
 	o: oscillator calibration. Extra par [target Hz, optional] (ATTINY13 ONLY)\n");
-
 		return -1;
 	}
 
@@ -227,6 +228,25 @@ int main( int argc, char ** argv )
 		DumpAVRMemories(devcode);
 		UnconfigureAVRPins();
 		return 0;
+	}
+	case 'b': case 'B':
+	{
+		int raddr = -1; 
+		if( argc == 5 )
+		{
+			int r = cnreadint( argv[4], &raddr, 0 );
+			if( r ) raddr = -1;
+		}
+		if( argc != 5 || raddr < 0 )
+		{
+			fprintf( stderr, "Need [address] to write.\n" );
+			return -9;
+		}
+		InitAVRSoftSPI();
+		int r = ReadFlashWord( devcode, raddr );
+		printf( "%d\n", r );
+		UnconfigureAVRPins();
+		return (r<0)?r:0;
 	}
 	case 'o': case 'O':
 	{
