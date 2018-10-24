@@ -1318,7 +1318,7 @@ $EndComp
 Wire Wire Line
 	7800 4500 7650 4500
 Wire Wire Line
-	7650 4800 3900 4800
+	3900 4800 7650 4800
 Wire Wire Line
 	3900 4800 3900 1650
 Wire Wire Line
@@ -1420,23 +1420,12 @@ Text GLabel 2550 6350 0    60   Input ~ 0
 ~AVRRST~
 Text GLabel 4900 7100 2    60   Input ~ 0
 PI_PWR
-$Comp
-L Q_NMOS_GDS Q1
-U 1 1 5B83A81E
-P 4800 7400
-F 0 "Q1" H 5100 7450 50  0000 R CNN
-F 1 "Q_NMOS_GDS" H 5450 7350 50  0000 R CNN
-F 2 "SOT-23" H 5000 7500 50  0000 C CNN
-F 3 "" H 4800 7400 50  0000 C CNN
-	1    4800 7400
-	1    0    0    -1  
-$EndComp
 Text GLabel 4600 7400 0    60   Input ~ 0
 FANCTL
 Text GLabel 2550 6150 0    60   Input ~ 0
 FANCTL
 Wire Wire Line
-	2550 6250 1950 6250
+	1950 6250 2550 6250
 $Comp
 L R R7
 U 1 1 5B83EBD4
@@ -1539,4 +1528,83 @@ Wire Wire Line
 	5400 7200 5400 7000
 Wire Wire Line
 	5400 7000 5750 7000
+$Comp
+L Q_NMOS_GSD Q1
+U 1 1 5BB46437
+P 4800 7400
+F 0 "Q1" H 5100 7450 50  0000 R CNN
+F 1 "2N7002" H 5450 7350 50  0000 R CNN
+F 2 "SOT-23" H 5000 7500 50  0000 C CNN
+F 3 "" H 4800 7400 50  0000 C CNN
+	1    4800 7400
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 2650 2    60   Input ~ 0
+GPIO5
+Text GLabel 3400 2450 2    60   Input ~ 0
+GPIO4
+Text GLabel 3400 2350 2    60   Input ~ 0
+GPIO3
+Text GLabel 3400 2250 2    60   Input ~ 0
+GPIO2
+Text GLabel 3400 2750 2    60   Input ~ 0
+GPIO6
+Text GLabel 3400 3550 2    60   Input ~ 0
+GPIO12
+Text GLabel 3400 3650 2    60   Input ~ 0
+GPIO13
+Text GLabel 3400 3850 2    60   Input ~ 0
+GPIO14
+Text GLabel 3400 3950 2    60   Input ~ 0
+GPIO15
+Text GLabel 1600 3550 0    60   Input ~ 0
+GPIO27
+Text GLabel 1600 3450 0    60   Input ~ 0
+GPIO26
+Text GLabel 1600 3350 0    60   Input ~ 0
+GPIO25
+Text GLabel 1600 3250 0    60   Input ~ 0
+GPIO24
+Text GLabel 1600 3150 0    60   Input ~ 0
+GPIO23
+Text GLabel 1600 3050 0    60   Input ~ 0
+GPIO22
+Text GLabel 1600 2950 0    60   Input ~ 0
+GPIO21
+Text GLabel 1600 2850 0    60   Input ~ 0
+GPIO20
+Text GLabel 1600 2750 0    60   Input ~ 0
+GPIO19
+Text GLabel 1600 2650 0    60   Input ~ 0
+GPIO18
+Text GLabel 1600 2550 0    60   Input ~ 0
+GPIO17
+Text GLabel 1600 2450 0    60   Input ~ 0
+GPIO16
+Text GLabel 2600 1850 1    60   Input ~ 0
+3V3
+$Comp
+L TACTILE SW1
+U 1 1 5BC5CC6A
+P 9200 5650
+F 0 "SW1" H 9200 5500 60  0000 C CNN
+F 1 "PWR" H 9200 5800 60  0000 C CNN
+F 2 "TACTILE10" H 9200 5650 60  0000 C CNN
+F 3 "" H 9200 5650 60  0000 C CNN
+	1    9200 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR062
+U 1 1 5BC5D089
+P 8900 5550
+F 0 "#PWR062" H 8900 5300 50  0001 C CNN
+F 1 "GND" H 8900 5400 50  0000 C CNN
+F 2 "" H 8900 5550 50  0001 C CNN
+F 3 "" H 8900 5550 50  0001 C CNN
+	1    8900 5550
+	0    1    1    0   
+$EndComp
+Text GLabel 9500 5750 2    60   Input ~ 0
+GPIO21
 $EndSCHEMATC
