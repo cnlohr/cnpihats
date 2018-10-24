@@ -99,7 +99,7 @@ static int  WaitForAVR()
 }
 
 
-static int  EraseAVR()
+int  EraseAVR()
 {
 	int i;
 	int r = AVRSR4( 0xAC800000 );
@@ -117,6 +117,8 @@ void  ResetAVR()
 	AVRSETRST(1);
 	usleep(20*1000);
 }
+
+
 
 int  ProgramAVRFlash( uint8_t * source, uint16_t bytes, int procid, int pagesize )
 {
@@ -177,6 +179,77 @@ fail:
 	return -1;
 }
 
+int  Burnfuses( uint32_t procid, uint32_t hfuselfuse )
+{
+	int r = EnterAVRProgramMode( procid ); 	if( r ) { printf( "Enter Program Mode Fail.\n" ); goto fail; }
+	usleep(2000);
+	uint8_t hfuse = (hfuselfuse & 0xff00) >> 8;
+	uint8_t lfuse = hfuselfuse & 0xff;
+	printf( "Programming AVR %p:%02x:%02x\n", procid, hfuse, lfuse );
+	AVRSR4( 0xaca80000 | hfuse); 
+	hfuse = AVRSR4( 0x58080000 );
+	hfuse = AVRSR4( 0x58080000 );
+	hfuse = AVRSR4( 0x58080000 );
+	AVRSR4( 0xaca00000 | lfuse); 
+	lfuse = AVRSR4( 0x50000000 );
+	lfuse = AVRSR4( 0x50000000 );
+	lfuse = AVRSR4( 0x50000000 );
+	printf( "Read back: %02x:%02x\n",  hfuse&0xff, lfuse&0xff );
+
+	printf( "Reset AVR.\n" );
+	AVRSETRST(1);
+	usleep(20*1000);
+
+	return 0;
+fail:
+	return -1;
+}
+
+
+int  WriteEEProm( uint32_t procid, int address, uint8_t value )
+{
+	int r = EnterAVRProgramMode( procid ); 	if( r ) { printf( "Enter Program Mode Fail.\n" ); goto fail; }
+	usleep(2000);
+	AVRSR4( 0xc0000000 | (address<<8) | value );
+	uint8_t rvalue = AVRSR4( 0xa0000000 | (address<<8) );
+	printf( "Read back: %02x:%02x\n",  address, rvalue );
+
+	printf( "Reset AVR.\n" );
+	AVRSETRST(1);
+	usleep(20*1000);
+	return 0;
+fail:
+	return -1;
+}
+
+int DumpAVRMemories( int procid )
+{
+	int r = EnterAVRProgramMode( procid ); 	if( r ) { printf( "Enter Program Mode Fail.\n" ); goto fail; }
+	int i;
+	uint32_t hfuse = AVRSR4( 0x58080000 );
+	uint32_t lfuse = AVRSR4( 0x50000000 );
+	printf( "Read back: %02x:%02x\n",  hfuse&0xff, lfuse&0xff );
+
+	printf("\nReading\n" );
+	for( i = 0; i < 512; i++ ) //XXX WARNING: Fix size?
+	{
+		uint8_t ir = AVRSR4( 0x20000000 | ((i)<<8 ) )&0xff;
+		printf( "%02x", ir );
+		ir = AVRSR4( 0x28000000 | ((i)<<8) )&0xff;
+		printf( "%02x ", ir );
+		if( ( i & 0x07 ) == 0x07 ) printf( "\n" ); 
+	}
+
+	printf( "Reset AVR.\n" );
+	AVRSETRST(1);
+	usleep(20*1000);
+
+	return 0;
+fail:
+	return -1;
+}
+
+
 void InitAVRSoftSPI()
 {
 	INIT_GPIOS();
@@ -184,6 +257,11 @@ void InitAVRSoftSPI()
 	usleep(30);
 	AVRSETRST(1);
 	usleep(20*1000);
+}
+
+void UnconfigureAVRPins()
+{
+	UNINIT_GPIOS();
 }
 
 #if 0
