@@ -195,7 +195,7 @@ int  Burnfuses( uint32_t procid, uint32_t hfuselfuse )
 	for( tries; tries < 10; tries++ )
 	{
 		AVRSR4( 0xaca80000 | hfuse); 
-		usleep( 100 );
+		usleep( 200 );
 		ret = AVRSR4( 0x58080000 ) & 0xff;
 		ret = AVRSR4( 0x58080000 ) & 0xff;
 		ret = AVRSR4( 0x58080000 ) & 0xff;
@@ -206,7 +206,7 @@ int  Burnfuses( uint32_t procid, uint32_t hfuselfuse )
 	for( tries; tries < 10; tries++ )
 	{
 		AVRSR4( 0xaca00000 | lfuse);
-		usleep( 100 );
+		usleep( 200 );
 		ret = AVRSR4( 0x50000000 ) & 0xff;
 		ret = AVRSR4( 0x50000000 ) & 0xff;
 		ret = AVRSR4( 0x50000000 ) & 0xff;
