@@ -1,4 +1,4 @@
-update=Mon 29 Oct 2018 05:27:12 PM EDT
+update=Fri 02 Nov 2018 05:13:34 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,6 +25,16 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 [eeschema]
 version=1
 LibDir=
@@ -239,3 +249,4 @@ LibName207=/home/cnlohr/electrical/kicad/tps40211
 LibName208=/home/cnlohr/electrical/kicad/lm5110
 LibName209=/home/cnlohr/electrical/kicad/vn7040-switch
 LibName210=/home/cnlohr/electrical/kicad/ap1117sot223
+LibName211=/home/cnlohr/electrical/kicad/tps22810-high-side-driver
