@@ -147,7 +147,7 @@ int main( int argc, char ** argv )
 	c: config chip fuses [0xff_hfuse_lfuse] (must indicate 0xff first)\n\
 	r: dump chip memories\n\
 	b: read byte [address]\n\
-	o: oscillator calibration. Extra par [target Hz, optional] (ATTINY13 ONLY)\n");
+	o: oscillator calibration. Extra par [target Hz, optional] (ATTINY13/ATTINY25 ONLY)\n");
 		return -1;
 	}
 
@@ -269,10 +269,22 @@ int main( int argc, char ** argv )
 		double best_cal = 1e20;
 		double freqat = 1e20;
 
-		FILE * f = fopen( "calibrate_attiny13/calibrate_attiny13.bin", "rb" );
+		int calmax = 127;
+		const char * flashdev = "DEVICE NOT SUPPORTED";
+		if( devcode == 0x1e9108 )
+		{
+			flashdev = "calibrate_attiny25/calibrate_attiny25.bin";
+			calmax = 255;
+		}
+		else if( devcode == 0x1e9007 )
+		{
+			flashdev = "calibrate_attiny13/calibrate_attiny13.bin";
+		}
+
+		FILE * f = fopen( flashdev, "rb" );
 		if( !f )
 		{
-			fprintf( stderr, "Error can't open %s for flashing\n", "calibrate_attiny13/calibrate_attiny13.bin" );
+			fprintf( stderr, "Error can't open %s for flashing\n", flashdev );
 			return -3;
 		}
 
@@ -306,7 +318,7 @@ int main( int argc, char ** argv )
 			if( MHz < targmhz ) osccal += jump;
 			else osccal -= jump;
 			if( osccal < 0 ) osccal = 0;
-			if( osccal > 127 ) osccal = 127;
+			if( osccal > calmax ) osccal = calmax;
 		}
 		printf( "%d, %f, %f, %3.4f%%\n", best_osc, freqat, best_cal, best_cal/freqat*100. );
 		return 0;
