@@ -17,7 +17,7 @@ test.lst : test.c
 	avr-gcc -c -g -Wa,-a,-ad $(CFLAGS) test.c > $@
 
 burn : test.bin
-	../avrflasher 0x1e9108 16 test.bin
+	../avrflasher 0x1e9108 16 w test.bin
 
 #For PLL
 burnfuses :
