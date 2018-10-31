@@ -1,0 +1,765 @@
+EESchema Schematic File Version 2
+LIBS:rpi_esp_flasher-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:lsm9ds1
+LIBS:cp2104
+LIBS:7805
+LIBS:microsd_1050270001
+LIBS:stm32f303
+LIBS:74hc4067
+LIBS:pusb2x4y
+LIBS:mpu-9250
+LIBS:tlv320adc3101
+LIBS:flipflop-sn74lvc1g175
+LIBS:atmel_kk
+LIBS:7805to220
+LIBS:pwrcnv_nxe1s0305mc-r7
+LIBS:memi2c_m24m02-dr
+LIBS:mma8653fc-accel
+LIBS:mcp23008-qfn
+LIBS:lan8720a
+LIBS:ws_switch
+LIBS:opamp_mcp6001t
+LIBS:protect_ncp360snt1g
+LIBS:atmegax8pb
+LIBS:l6470-powerso36
+LIBS:mosfet-lfpak56
+LIBS:tusb2077a
+LIBS:stbc08-battcharger
+LIBS:mag3110
+LIBS:usbmicrob-10118194-0001lf
+LIBS:ms5611-01ba03
+LIBS:can_sn65hvd251qdrq1
+LIBS:esp8266-wi07-6
+LIBS:tactile
+LIBS:tvs2-wurth-82400102
+LIBS:zener-sot23-3
+LIBS:attinyx4
+LIBS:nor-nc7sz02p5x
+LIBS:tvs-2x
+LIBS:stm32f301
+LIBS:stm32f207
+LIBS:opto-logic-tlp2361
+LIBS:rs485-isl3170
+LIBS:ov2640_ribbon
+LIBS:isol_adum1201brz
+LIBS:lsm303c
+LIBS:LSM9DS1
+LIBS:cap1128
+LIBS:ltv-846s
+LIBS:network0606
+LIBS:1206network
+LIBS:diode-to-277-3
+LIBS:pl140c
+LIBS:l6470
+LIBS:enc424j600
+LIBS:esp8266ex
+LIBS:a4447sljtr
+LIBS:tlv711
+LIBS:resonator6smd
+LIBS:um5k1ntr
+LIBS:attiny441
+LIBS:opto2-ltv-826s
+LIBS:mfrc522
+LIBS:bmp280
+LIBS:sp485cn
+LIBS:mosdriver_ncp5901bmntbg
+LIBS:23lc1024
+LIBS:halleffect-tcs20dlr
+LIBS:ksz8081rn
+LIBS:ap1117
+LIBS:4427
+LIBS:atx_power
+LIBS:attiny441-qfn
+LIBS:lis3mdl
+LIBS:tcs3x7x
+LIBS:avr_usb_3v3-cache
+LIBS:74hc390
+LIBS:lsm303d
+LIBS:attinyx5
+LIBS:crystal-4p
+LIBS:tvs-bidirection
+LIBS:mcp1803
+LIBS:rn-cay16-f4
+LIBS:mosfetx2vdfn8
+LIBS:stm32f303_32
+LIBS:opa832
+LIBS:photomos
+LIBS:usb-prot-ip4220cz6
+LIBS:usb3-gsb443133hr
+LIBS:cd4021
+LIBS:lsm303dlhc
+LIBS:esp12e
+LIBS:ltc2471cms
+LIBS:2.4GHZ_2450FB15L0001
+LIBS:mcp1804
+LIBS:mic550x-reg
+LIBS:atmegaxu2
+LIBS:pfetwsmini6-f1-b
+LIBS:ws2812b
+LIBS:ir2101
+LIBS:xfrmr2x2
+LIBS:isl3177
+LIBS:BELFuse_Ethernet
+LIBS:neon14
+LIBS:bmp085
+LIBS:lm386
+LIBS:atmega48_88_168_328_tqfp32
+LIBS:mcp23008-soic
+LIBS:jfet-n_sot-23
+LIBS:pnp-sot23
+LIBS:bluetoothedpa
+LIBS:npn-2222
+LIBS:mmpq2907a
+LIBS:lvt-816s
+LIBS:ds2438z
+LIBS:ak5358b
+LIBS:bridge-MB2S-TP
+LIBS:6multi
+LIBS:stm32f407_100
+LIBS:exb-a
+LIBS:25q40b
+LIBS:atmega1284rfr2
+LIBS:mcp1824_ct
+LIBS:5050RGB
+LIBS:pcb_bom
+LIBS:mos_p_d2
+LIBS:esp32
+LIBS:avr6pin
+LIBS:max31855
+LIBS:mpl3115a2
+LIBS:lsm9ds0
+LIBS:adc-ltc2450
+LIBS:ft600q
+LIBS:mos_n_w_diode
+LIBS:pfetsot223
+LIBS:dmp2240udm
+LIBS:sp3010-04utg
+LIBS:l6474
+LIBS:max3010x
+LIBS:LNK3202
+LIBS:choke
+LIBS:dualopamp
+LIBS:hv9910c
+LIBS:attinyx61
+LIBS:mcp3201
+LIBS:74hc4051
+LIBS:stm32f042-lqfp32
+LIBS:cap1298_soic
+LIBS:cap1298_qfn
+LIBS:stm8s003f3
+LIBS:r2r_ladder_4816p-r2r-103lf
+LIBS:74hc595_cp
+LIBS:mcp4801-dac
+LIBS:stm8l051
+LIBS:efm8bb2-qfn28
+LIBS:efm8bb1-soic16
+LIBS:efm8bb-qfn20
+LIBS:sk6812_3535
+LIBS:da4xbridge
+LIBS:11aa-unio-eeprom
+LIBS:ws2813
+LIBS:ts4231
+LIBS:xor_sot_353_74lvc1g86
+LIBS:ice40ul1k
+LIBS:esp32-wroom
+LIBS:conn_8x2
+LIBS:nc7sz08
+LIBS:attiny13-mm
+LIBS:drv8872
+LIBS:ad9216
+LIBS:cyusb3012
+LIBS:cp2102n
+LIBS:74hc259
+LIBS:max19517
+LIBS:lm3478
+LIBS:tps40211
+LIBS:lm5110
+LIBS:vn7040-switch
+LIBS:ap1117sot223
+LIBS:rpi_esp_flasher-cache
+EELAYER 25 0
+EELAYER END
+$Descr USLetter 11000 8500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Raspberry_Pi_2_3 J1
+U 1 1 5ACED100
+P 2500 3150
+F 0 "J1" H 3200 1900 50  0000 C CNN
+F 1 "Raspberry_Pi_2_3" H 2100 4050 50  0000 C CNN
+F 2 "IDC_Header_Straight_10pins" H 3500 4400 50  0001 C CNN
+F 3 "" H 2550 3000 50  0001 C CNN
+	1    2500 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR01
+U 1 1 5ACED23D
+P 2100 4450
+F 0 "#PWR01" H 2100 4200 50  0001 C CNN
+F 1 "GND" H 2100 4300 50  0000 C CNN
+F 2 "" H 2100 4450 50  0001 C CNN
+F 3 "" H 2100 4450 50  0001 C CNN
+	1    2100 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5ACED257
+P 2200 4450
+F 0 "#PWR02" H 2200 4200 50  0001 C CNN
+F 1 "GND" H 2200 4300 50  0000 C CNN
+F 2 "" H 2200 4450 50  0001 C CNN
+F 3 "" H 2200 4450 50  0001 C CNN
+	1    2200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR03
+U 1 1 5ACED271
+P 2300 4450
+F 0 "#PWR03" H 2300 4200 50  0001 C CNN
+F 1 "GND" H 2300 4300 50  0000 C CNN
+F 2 "" H 2300 4450 50  0001 C CNN
+F 3 "" H 2300 4450 50  0001 C CNN
+	1    2300 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR04
+U 1 1 5ACED28B
+P 2400 4450
+F 0 "#PWR04" H 2400 4200 50  0001 C CNN
+F 1 "GND" H 2400 4300 50  0000 C CNN
+F 2 "" H 2400 4450 50  0001 C CNN
+F 3 "" H 2400 4450 50  0001 C CNN
+	1    2400 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5ACED2A5
+P 2500 4450
+F 0 "#PWR05" H 2500 4200 50  0001 C CNN
+F 1 "GND" H 2500 4300 50  0000 C CNN
+F 2 "" H 2500 4450 50  0001 C CNN
+F 3 "" H 2500 4450 50  0001 C CNN
+	1    2500 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR06
+U 1 1 5ACED2BF
+P 2600 4450
+F 0 "#PWR06" H 2600 4200 50  0001 C CNN
+F 1 "GND" H 2600 4300 50  0000 C CNN
+F 2 "" H 2600 4450 50  0001 C CNN
+F 3 "" H 2600 4450 50  0001 C CNN
+	1    2600 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5ACED2D9
+P 2700 4450
+F 0 "#PWR07" H 2700 4200 50  0001 C CNN
+F 1 "GND" H 2700 4300 50  0000 C CNN
+F 2 "" H 2700 4450 50  0001 C CNN
+F 3 "" H 2700 4450 50  0001 C CNN
+	1    2700 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR08
+U 1 1 5ACED2F3
+P 2800 4450
+F 0 "#PWR08" H 2800 4200 50  0001 C CNN
+F 1 "GND" H 2800 4300 50  0000 C CNN
+F 2 "" H 2800 4450 50  0001 C CNN
+F 3 "" H 2800 4450 50  0001 C CNN
+	1    2800 4450
+	1    0    0    -1  
+$EndComp
+Text GLabel 2400 1850 1    60   Input ~ 0
+PI_PWR
+Text GLabel 2300 1850 1    60   Input ~ 0
+PI_PWR
+$Comp
+L LED-RESCUE-rpi_with_supply D1
+U 1 1 5AD03AF1
+P 4250 3650
+F 0 "D1" H 4250 3750 50  0000 C CNN
+F 1 "WHT" H 4250 3550 50  0000 C CNN
+F 2 "LED_0805" H 4250 3650 50  0001 C CNN
+F 3 "" H 4250 3650 50  0001 C CNN
+	1    4250 3650
+	0    1    -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-rpi_with_supply D2
+U 1 1 5AD03BF5
+P 4750 1350
+F 0 "D2" H 4750 1450 50  0000 C CNN
+F 1 "BLU" H 4750 1250 50  0000 C CNN
+F 2 "LED_0805" H 4750 1350 50  0001 C CNN
+F 3 "" H 4750 1350 50  0001 C CNN
+	1    4750 1350
+	0    1    -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 5AD04BA6
+P 4750 1650
+F 0 "R2" V 4830 1650 50  0000 C CNN
+F 1 "1k" V 4750 1650 50  0000 C CNN
+F 2 "R_0805" V 4680 1650 50  0001 C CNN
+F 3 "" H 4750 1650 50  0001 C CNN
+	1    4750 1650
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR09
+U 1 1 5AD052CD
+P 4550 5050
+F 0 "#PWR09" H 4550 4800 50  0001 C CNN
+F 1 "GND" H 4550 4900 50  0000 C CNN
+F 2 "" H 4550 5050 50  0001 C CNN
+F 3 "" H 4550 5050 50  0001 C CNN
+	1    4550 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR010
+U 1 1 5AD05368
+P 4750 1800
+F 0 "#PWR010" H 4750 1550 50  0001 C CNN
+F 1 "GND" H 4750 1650 50  0000 C CNN
+F 2 "" H 4750 1800 50  0001 C CNN
+F 3 "" H 4750 1800 50  0001 C CNN
+	1    4750 1800
+	1    0    0    -1  
+$EndComp
+Text GLabel 3400 2950 2    60   Input ~ 0
+INPUT
+Wire Wire Line
+	2700 1650 2700 1850
+Text GLabel 3400 3150 2    60   Input ~ 0
+MISO
+Text GLabel 3400 3250 2    60   Input ~ 0
+MOSI
+Text GLabel 3400 3350 2    60   Input ~ 0
+SCK
+Text GLabel 3400 3050 2    60   Input ~ 0
+~AVRRST~
+Text GLabel 3400 2650 2    60   Input ~ 0
+GPIO5
+Text GLabel 3400 2450 2    60   Input ~ 0
+GPIO4
+Text GLabel 3400 2250 2    60   Input ~ 0
+GPIO2
+Text GLabel 3400 2750 2    60   Input ~ 0
+GPIO6
+Text GLabel 3400 3550 2    60   Input ~ 0
+GPIO12
+Text GLabel 3400 3650 2    60   Input ~ 0
+GPIO13
+Text GLabel 1600 3550 0    60   Input ~ 0
+GPIO27
+Text GLabel 1600 3450 0    60   Input ~ 0
+GPIO26
+Text GLabel 1600 3350 0    60   Input ~ 0
+GPIO25
+Text GLabel 1600 3250 0    60   Input ~ 0
+GPIO24
+Text GLabel 1600 3150 0    60   Input ~ 0
+GPIO23
+Text GLabel 1600 3050 0    60   Input ~ 0
+GPIO22
+Text GLabel 1600 2950 0    60   Input ~ 0
+GPIO21
+Text GLabel 1600 2850 0    60   Input ~ 0
+GPIO20
+Text GLabel 1600 2750 0    60   Input ~ 0
+GPIO19
+Text GLabel 1600 2650 0    60   Input ~ 0
+GPIO18
+Text GLabel 1600 2550 0    60   Input ~ 0
+GPIO17
+Text GLabel 1600 2450 0    60   Input ~ 0
+GPIO16
+$Comp
+L TACTILE SW1
+U 1 1 5BC5CC6A
+P 6200 4050
+F 0 "SW1" H 6200 3900 60  0000 C CNN
+F 1 "PWR" H 6200 4200 60  0000 C CNN
+F 2 "TACTILE10" H 6200 4050 60  0000 C CNN
+F 3 "" H 6200 4050 60  0000 C CNN
+	1    6200 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR011
+U 1 1 5BC5D089
+P 5900 3950
+F 0 "#PWR011" H 5900 3700 50  0001 C CNN
+F 1 "GND" H 5900 3800 50  0000 C CNN
+F 2 "" H 5900 3950 50  0001 C CNN
+F 3 "" H 5900 3950 50  0001 C CNN
+	1    5900 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L R R11
+U 1 1 5BD46680
+P 3550 3850
+F 0 "R11" V 3630 3850 50  0000 C CNN
+F 1 "270" V 3550 3850 50  0000 C CNN
+F 2 "R_0805" V 3480 3850 50  0001 C CNN
+F 3 "" H 3550 3850 50  0001 C CNN
+	1    3550 3850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-rpi_with_supply D6
+U 1 1 5BD4B84C
+P 6850 2600
+F 0 "D6" H 6850 2700 50  0000 C CNN
+F 1 "BLU" H 6850 2500 50  0000 C CNN
+F 2 "LED_0805" H 6850 2600 50  0001 C CNN
+F 3 "" H 6850 2600 50  0001 C CNN
+	1    6850 2600
+	0    1    -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR012
+U 1 1 5BD4FE2B
+P 2700 1650
+F 0 "#PWR012" H 2700 1500 50  0001 C CNN
+F 1 "+3.3V" H 2700 1790 50  0000 C CNN
+F 2 "" H 2700 1650 50  0000 C CNN
+F 3 "" H 2700 1650 50  0000 C CNN
+	1    2700 1650
+	1    0    0    -1  
+$EndComp
+Text GLabel 4250 3500 1    60   Input ~ 0
+PI_PWR
+$Comp
+L 4427 U1
+U 1 1 5BD7DC6E
+P 6050 2250
+F 0 "U1" H 6300 2500 60  0000 C CNN
+F 1 "4427" H 5800 2500 60  0000 C CNN
+F 2 "SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6050 2250 60  0000 C CNN
+F 3 "" H 6050 2250 60  0000 C CNN
+	1    6050 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3700 2350 2    60   Input ~ 0
+GPIO3
+Text GLabel 5550 2400 0    60   Input ~ 0
+GPIO2
+$Comp
+L R R5
+U 1 1 5BD7DE8B
+P 3550 3950
+F 0 "R5" V 3630 3950 50  0000 C CNN
+F 1 "270" V 3550 3950 50  0000 C CNN
+F 2 "R_0805" V 3480 3950 50  0001 C CNN
+F 3 "" H 3550 3950 50  0001 C CNN
+	1    3550 3950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R3
+U 1 1 5BD7DFFA
+P 3550 2350
+F 0 "R3" V 3630 2350 50  0000 C CNN
+F 1 "270" V 3550 2350 50  0000 C CNN
+F 2 "R_0805" V 3480 2350 50  0001 C CNN
+F 3 "" H 3550 2350 50  0001 C CNN
+	1    3550 2350
+	0    -1   -1   0   
+$EndComp
+Text GLabel 6500 4150 2    60   Input ~ 0
+GPIO4
+Text GLabel 5150 3500 1    60   Input ~ 0
+GPIO3
+$Comp
+L CONN_01X05 P1
+U 1 1 5BD7E424
+P 8050 2750
+F 0 "P1" H 8050 3050 50  0000 C CNN
+F 1 "ESP" H 8050 2450 50  0000 C CNN
+F 2 "Pin_Header_Straight_1x05" H 8050 3150 50  0000 C CNN
+F 3 "" H 8050 2750 50  0000 C CNN
+	1    8050 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR013
+U 1 1 5BD7E56D
+P 7850 2550
+F 0 "#PWR013" H 7850 2300 50  0001 C CNN
+F 1 "GND" H 7850 2400 50  0000 C CNN
+F 2 "" H 7850 2550 50  0001 C CNN
+F 3 "" H 7850 2550 50  0001 C CNN
+	1    7850 2550
+	0    1    1    0   
+$EndComp
+Text GLabel 3700 3850 2    60   Input ~ 0
+LTX
+Text GLabel 3700 3950 2    60   Input ~ 0
+LRX
+Text GLabel 7850 2750 0    60   Input ~ 0
+LRX
+Text GLabel 7850 2650 0    60   Input ~ 0
+LTX
+Wire Wire Line
+	7850 2850 7150 2850
+Wire Wire Line
+	7150 2850 7150 2400
+Wire Wire Line
+	7150 2400 6600 2400
+Text GLabel 7850 2950 0    60   Input ~ 0
+GPIO3
+$Comp
+L GND #PWR014
+U 1 1 5BD7EA12
+P 5550 2300
+F 0 "#PWR014" H 5550 2050 50  0001 C CNN
+F 1 "GND" H 5550 2150 50  0000 C CNN
+F 2 "" H 5550 2300 50  0001 C CNN
+F 3 "" H 5550 2300 50  0001 C CNN
+	1    5550 2300
+	0    1    1    0   
+$EndComp
+Text GLabel 7200 3400 2    60   Input ~ 0
+PI_PWR
+$Comp
+L AP1117SOT223 U2
+U 1 1 5BD77D7F
+P 6650 3500
+F 0 "U2" H 6650 3700 60  0000 C CNN
+F 1 "1117_5v_or_3v" H 6650 3300 60  0000 C CNN
+F 2 "SOT-223" H 6650 3500 60  0000 C CNN
+F 3 "" H 6650 3500 60  0000 C CNN
+	1    6650 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3500 7200 3500
+Wire Wire Line
+	7300 2300 7300 3500
+Wire Wire Line
+	7300 3450 6100 3450
+Wire Wire Line
+	6100 3450 6100 3500
+$Comp
+L C C7
+U 1 1 5BD77FF2
+P 7250 2000
+F 0 "C7" H 7275 2100 50  0000 L CNN
+F 1 ".1u" H 7275 1900 50  0000 L CNN
+F 2 "C_0805" H 7288 1850 50  0001 C CNN
+F 3 "" H 7250 2000 50  0001 C CNN
+	1    7250 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR015
+U 1 1 5BD780E6
+P 7200 3600
+F 0 "#PWR015" H 7200 3350 50  0001 C CNN
+F 1 "GND" H 7200 3450 50  0000 C CNN
+F 2 "" H 7200 3600 50  0001 C CNN
+F 3 "" H 7200 3600 50  0001 C CNN
+	1    7200 3600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7300 2300 6600 2300
+Connection ~ 7300 3450
+Wire Wire Line
+	7250 2150 7250 2300
+Connection ~ 7250 2300
+$Comp
+L GND #PWR016
+U 1 1 5BD781C9
+P 7250 1850
+F 0 "#PWR016" H 7250 1600 50  0001 C CNN
+F 1 "GND" H 7250 1700 50  0000 C CNN
+F 2 "" H 7250 1850 50  0001 C CNN
+F 3 "" H 7250 1850 50  0001 C CNN
+	1    7250 1850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6850 2450 6850 2400
+Connection ~ 6850 2400
+Wire Wire Line
+	4750 1200 6900 1200
+Wire Wire Line
+	6900 1200 6900 2300
+Connection ~ 6900 2300
+$Comp
+L GND #PWR017
+U 1 1 5BD7940D
+P 6850 3050
+F 0 "#PWR017" H 6850 2800 50  0001 C CNN
+F 1 "GND" H 6850 2900 50  0000 C CNN
+F 2 "" H 6850 3050 50  0001 C CNN
+F 3 "" H 6850 3050 50  0001 C CNN
+	1    6850 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R4
+U 1 1 5BD7A19A
+P 6850 2900
+F 0 "R4" V 6930 2900 50  0000 C CNN
+F 1 "1k" V 6850 2900 50  0000 C CNN
+F 2 "R_0805" V 6780 2900 50  0001 C CNN
+F 3 "" H 6850 2900 50  0001 C CNN
+	1    6850 2900
+	-1   0    0    1   
+$EndComp
+$Comp
+L LED-RESCUE-rpi_with_supply D4
+U 1 1 5BD7B2C3
+P 4550 3650
+F 0 "D4" H 4550 3750 50  0000 C CNN
+F 1 "RED" H 4550 3550 50  0000 C CNN
+F 2 "LED_0805" H 4550 3650 50  0001 C CNN
+F 3 "" H 4550 3650 50  0001 C CNN
+	1    4550 3650
+	0    1    -1   0   
+$EndComp
+$Comp
+L LED-RESCUE-rpi_with_supply D3
+U 1 1 5BD7B60E
+P 4850 3650
+F 0 "D3" H 4850 3750 50  0000 C CNN
+F 1 "GRN" H 4850 3550 50  0000 C CNN
+F 2 "LED_0805" H 4850 3650 50  0001 C CNN
+F 3 "" H 4850 3650 50  0001 C CNN
+	1    4850 3650
+	0    1    -1   0   
+$EndComp
+Text GLabel 4850 3500 1    60   Input ~ 0
+LRX
+Text GLabel 4550 3500 1    60   Input ~ 0
+LTX
+$Comp
+L GND #PWR018
+U 1 1 5BD7B792
+P 4650 5050
+F 0 "#PWR018" H 4650 4800 50  0001 C CNN
+F 1 "GND" H 4650 4900 50  0000 C CNN
+F 2 "" H 4650 5050 50  0001 C CNN
+F 3 "" H 4650 5050 50  0001 C CNN
+	1    4650 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR019
+U 1 1 5BD7B7F4
+P 4750 5050
+F 0 "#PWR019" H 4750 4800 50  0001 C CNN
+F 1 "GND" H 4750 4900 50  0000 C CNN
+F 2 "" H 4750 5050 50  0001 C CNN
+F 3 "" H 4750 5050 50  0001 C CNN
+	1    4750 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED-RESCUE-rpi_with_supply D5
+U 1 1 5BD7BA64
+P 5150 3650
+F 0 "D5" H 5150 3750 50  0000 C CNN
+F 1 "ORN" H 5150 3550 50  0000 C CNN
+F 2 "LED_0805" H 5150 3650 50  0001 C CNN
+F 3 "" H 5150 3650 50  0001 C CNN
+	1    5150 3650
+	0    1    -1   0   
+$EndComp
+$Comp
+L GND #PWR020
+U 1 1 5BD7BBB9
+P 4850 5050
+F 0 "#PWR020" H 4850 4800 50  0001 C CNN
+F 1 "GND" H 4850 4900 50  0000 C CNN
+F 2 "" H 4850 5050 50  0001 C CNN
+F 3 "" H 4850 5050 50  0001 C CNN
+	1    4850 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 1206NETWORK U3
+U 1 1 5BD939E8
+P 4600 4550
+F 0 "U3" H 4300 4950 60  0000 C CNN
+F 1 "1k" H 4650 4350 60  0000 C CNN
+F 2 "NETWORK1206" H 4600 4550 60  0000 C CNN
+F 3 "" H 4600 4550 60  0000 C CNN
+	1    4600 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4550 4050 4250 4050
+Wire Wire Line
+	4250 4050 4250 3800
+Wire Wire Line
+	4550 3800 4650 3800
+Wire Wire Line
+	4650 3800 4650 4050
+Wire Wire Line
+	4750 4050 4750 3800
+Wire Wire Line
+	4750 3800 4850 3800
+Wire Wire Line
+	4850 4050 5150 4050
+Wire Wire Line
+	5150 4050 5150 3800
+$EndSCHEMATC
