@@ -1,4 +1,4 @@
-update=Mon 29 Oct 2018 05:27:12 PM EDT
+update=Thu 01 Nov 2018 09:47:24 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -239,3 +239,13 @@ LibName207=/home/cnlohr/electrical/kicad/tps40211
 LibName208=/home/cnlohr/electrical/kicad/lm5110
 LibName209=/home/cnlohr/electrical/kicad/vn7040-switch
 LibName210=/home/cnlohr/electrical/kicad/ap1117sot223
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
