@@ -1,4 +1,4 @@
-update=Fri 22 Jun 2018 04:36:16 AM EDT
+update=Fri 02 Nov 2018 04:58:34 PM EDT
 version=1
 last_client=kicad
 [pcbnew]
@@ -237,3 +237,4 @@ LibName205=/home/cnlohr/electrical/kicad/lm3478
 LibName206=/home/cnlohr/electrical/kicad/tps40211
 LibName207=/home/cnlohr/electrical/kicad/lm5110
 LibName208=/home/cnlohr/electrical/kicad/vn7040-switch
+LibName209=/home/cnlohr/electrical/kicad/tps22810-high-side-driver
